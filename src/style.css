@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+}
+
+header {
+  height: 100%;
+  grid-column: 0 / 1;
+}
+
+nav {
+  position: fixed;
+  left: -25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+button {
+  border-radius: 10px;
+  margin: 5px auto;
+  width: 75px;
+  height: 100px;
+}
