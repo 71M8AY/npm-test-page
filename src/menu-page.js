@@ -15,13 +15,18 @@ export function menuPage() {
 
   const menuTitle = document.createElement("p");
   menuTitle.textContent = "Menu: ";
+  menuTitle.className = "menuTitle";
 
   const menuDiv = document.createElement("div");
   menuDiv.className = "menuDiv";
   const menuList = document.createElement("ul");
+  menuList.className = "menuList";
   for (let i = 0; i < 9; i++) {
     menuList.appendChild(Object.assign(document.createElement("li")), {
       textContent: `${lorem.generateWords(Math.floor(Math.random() * 4) + 1)}`,
     });
   }
+
+  content.appendChild(menuTitle);
+  content.appendChild(menuDiv);
 }
