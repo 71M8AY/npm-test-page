@@ -4,19 +4,18 @@
   box-sizing: border-box;
 }
 
-body {
-  display: grid;
-  grid-template-columns: 75px 1fr;
-}
-
-header {
-  height: 100%;
-  grid-column: 0 / 1;
+@keyframes popOut {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 40px;
+  }
 }
 
 nav {
   position: fixed;
-  left: -25px;
+  left: -50px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,8 +23,83 @@ nav {
 }
 
 button {
+  padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.35rem;
+  writing-mode: vertical-rl;
   border-radius: 10px;
   margin: 5px auto;
-  width: 75px;
+  width: 100px;
   height: 100px;
+  box-shadow: 3px 0 10px 0px #00000091;
 }
+
+.menuBgColor {
+  background-color: rgb(230, 212, 188);
+}
+
+.aboutBgColor {
+  background-color: rgb(248, 236, 220);
+}
+
+.homeButton {
+  position: relative;
+  background-color: rgb(221, 121, 75);
+  animation-name: popOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.imgDiv {
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  background-image: url("https://files.catbox.moe/p9s6we.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(8deg);
+  filter: drop-shadow(10px 3px 5px #0000008c);
+}
+
+.mainTitle {
+  font-size: 3rem;
+  text-decoration: underline;
+  font-style: italic;
+  text-shadow: 2px 0px 2px rgba(105, 11, 11, 0.747);
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+.homePage {
+  height: 100%;
+  background-color: rgb(216, 186, 172);
+}
+
+.welcomeDiv {
+  background-color: antiquewhite;
+  margin: 0 auto;
+  width: 800px;
+  padding: 25px;
+  border: 25px groove rgb(151, 36, 1);
+}
+
+.welcomeDiv > p {
+  font-size: 1.3rem;
+  padding: 15px;
+}
+
+.welcomeDiv > p:first-child {
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* .menuPage {
+   background-color: rgb(230, 212, 188);
+} */
+
+/* .aboutPage {
+    background-color: rgb(248, 236, 220);
+} */
