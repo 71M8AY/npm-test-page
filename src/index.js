@@ -1,5 +1,6 @@
 import "./style.css";
 import { homePage } from "./home-page";
+import { menuPage } from "./menu-page";
 
 const homeButton = document.querySelector("button:first-child");
 homeButton.textContent = "Home";
