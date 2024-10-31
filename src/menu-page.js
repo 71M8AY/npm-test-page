@@ -22,10 +22,22 @@ export function menuPage() {
   const menuList = document.createElement("ul");
   menuList.className = "menuList";
   for (let i = 0; i < 9; i++) {
-    menuList.appendChild(Object.assign(document.createElement("li")), {
-      textContent: `${lorem.generateWords(Math.floor(Math.random() * 4) + 1)}`,
-    });
+    menuList.appendChild(
+      Object.assign(document.createElement("li"), {
+        textContent: `${lorem.generateWords(
+          Math.floor(Math.random() * 4) + 1
+        )} ------- ${(Math.random() * 50).toFixed(2)}$`,
+      })
+    );
+    menuList.querySelector(`li:nth-child(${i + 1})`).appendChild(
+      Object.assign(document.createElement("p"), {
+        textContent: `${lorem.generateWords(
+          Math.floor(Math.random() * 25) + 6
+        )}`,
+      })
+    );
   }
+  menuDiv.appendChild(menuList);
 
   content.appendChild(menuTitle);
   content.appendChild(menuDiv);

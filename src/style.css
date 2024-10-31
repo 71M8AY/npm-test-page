@@ -35,6 +35,12 @@ button {
   box-shadow: 3px 0 10px 0px #00000091;
 }
 
+/* The Buttons */
+
+.homeBgColor {
+  background-color: rgb(216, 186, 172);
+}
+
 .menuBgColor {
   background-color: rgb(230, 212, 188);
 }
@@ -42,6 +48,8 @@ button {
 .aboutBgColor {
   background-color: rgb(248, 236, 220);
 }
+
+/* Home Page Styles */
 
 .homeButton {
   position: relative;
@@ -96,9 +104,52 @@ button {
   font-size: 1.4rem;
 }
 
-/* .menuPage {
-   background-color: rgb(230, 212, 188);
-} */
+/* Menu Page Styles */
+
+.menuButton {
+  position: relative;
+  background-color: rgb(255, 221, 177);
+  animation-name: popOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.menuPage {
+  height: 100%;
+  background-color: rgb(230, 212, 188);
+}
+
+.menuTitle {
+  font-size: 3rem;
+  text-decoration: underline;
+  font-style: italic;
+  text-shadow: 2px 0px 2px rgba(105, 11, 11, 0.747);
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+.menuDiv {
+  padding: 40px;
+  margin: 0 auto;
+  height: 100%;
+  width: 650px;
+  background-color: antiquewhite;
+}
+
+.menuList {
+  padding: 25px;
+}
+
+.menuList li {
+  padding: 10px;
+  font-size: 1.8rem;
+}
+
+.menuList li p {
+  padding: 10px 0;
+  font-size: 1rem;
+}
 
 /* .aboutPage {
     background-color: rgb(248, 236, 220);
